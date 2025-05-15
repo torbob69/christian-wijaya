@@ -355,16 +355,16 @@ function updateBackgroundVideo(gender) {
     void backgroundVideo.offsetWidth;
     
     if (gender === "men") {
-        backgroundVideo.querySelector("source").src = "../assets/products/men-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = "/assets/products/men-product-thumbnail - Made with Clipchamp.mp4";
         thumbnailText.innerHTML = `MEN`;
     } 
     else if (gender === "women") {
-        backgroundVideo.querySelector("source").src = "../assets/products/women-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = "/assets/products/women-product-thumbnail - Made with Clipchamp.mp4";
         thumbnailText.innerHTML = `WOMEN`;
     }
     else {
         // Default background for "all"
-        backgroundVideo.querySelector("source").src = "../assets/products/all-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = "/assets/products/all-product-thumbnail - Made with Clipchamp.mp4";
         thumbnailText.innerHTML = 'ALL PRODUCTS';
     }
     
