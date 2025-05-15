@@ -1,0 +1,115 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+main{
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.history-title h1 {
+    text-align: center;
+    padding-top: 20dvh;
+    font-family: "DM Sans", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.history {
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.history .year{
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+.history h2{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.history p{
+    width: 40%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.history img{
+    object-fit: cover;
+    height: 40rem;
+    max-width: 70%;
+}
+
+.outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.outro img {
+    max-width: 80%;
+    height: auto;
+}
+
+.outro h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 3rem;
+}
+
+@media (max-width:768px) {
+    .history-title h1{
+        font-size: 2rem;
+    }
+
+    .history .year{
+        font-size: 3.5rem;
+    }
+
+    .history img{
+        height: auto;
+        width: 15rem;
+    }
+
+    .history h2{
+        font-size: 1.5rem;
+    }
+
+    .history p{
+        font-size: 0.7rem;
+        width: 85%;
+        line-height: 20px;
+    }
+}

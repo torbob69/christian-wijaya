@@ -1,0 +1,452 @@
+header {
+    background-color: rgba(255, 255, 255, 0.822);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5.5rem;
+    padding: 0 3.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    transition: all 0.5s ease;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: headerAnimation 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes headerAnimation {
+    0%{
+        height: 0rem;
+    }
+    100%{
+        height: 5.5rem;
+        background-color: rgba(255, 255, 255, 0.694);
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.gambar-kuda {
+    width: 6rem;
+    height: auto;
+    transition: width 0.5s ease;
+}
+
+#text-logo {
+    font-family: "Ephesis", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.7rem;
+    opacity: 1;
+    transition: opacity 0.3s ease, font-size 0.3s ease;
+    text-align: center;
+    transform: scale(1.5);
+}
+
+#side-bar {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    padding: 0;
+    height: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bba {
+    position: relative;
+    cursor: pointer;
+}
+
+.bba::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.bba:hover::after {
+    width: 100%;
+}
+
+.bba.active::after {
+    width: 100%;
+}
+
+.close-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mega-box {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5.5rem;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(40px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.bba:hover .mega-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.item-baru {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1400px;
+    gap: 1rem;
+}
+
+.bbh {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.column h3, 
+.column a.bbh {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.bbh::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.bbh:hover::after {
+    width: 100%;
+}
+
+.bbh.active::after {
+    width: 100%;
+}
+
+/* Mega Menu Links */
+.column a {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.column a:hover {
+    color: #666;
+}
+
+/* Special style for Éclat Lunaire section */
+.www {
+    width: 100%;
+}
+
+.gambar-eclat1 {
+    width: 100%;
+    height: auto;
+}
+
+.qqq {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.gambar-eclat2 {
+    width: 50%;
+    height: auto;
+}
+
+/* =========================================
+   RIGHT SIDE NAVIGATION
+   ========================================= */
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.top-header-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.75rem;
+    display: none;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+#search-icon {
+    height: 1.5rem;
+    width: auto;
+}
+
+.searchInput {
+    margin-top: 0.2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.75rem;
+    width: 6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    transition: width 0.3s ease;
+}
+
+.searchInput::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.75rem;
+    color: black;
+}
+
+/* Account Button */
+#account {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+#gambar-account {
+    height: 1.5rem;
+    width: auto;
+}
+
+/* Cart Button */
+#cart {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+#gambar-cart {
+    height: 1.5rem;
+    width: auto;
+}
+
+/* Menu Bar (Mobile) */
+#menu-bar {
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+    cursor: pointer;
+}
+
+#menu-icon {
+    height: 1.5rem;
+    width: auto;
+}
+
+.gambar-eclat1{
+    width: 16rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.gambar-eclat2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.www{
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.573);
+    font-weight: 200;
+} 
+
+.www p{
+    width: 12rem;
+    height: auto;
+}
+
+.qqq{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 16rem;
+    height: 5rem;
+}
+
+/* =========================================
+   RESPONSIVE STYLES
+   ========================================= */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0 1.5rem;
+        height: 4.8rem;
+    }
+    
+    #text-logo {
+        font-size: 0.6rem;
+    }
+    
+    .gambar-kuda {
+        width: 6rem;
+    }
+    
+    .right-side {
+        gap: 1rem;
+    }
+    
+    #menu-bar {
+        display: flex;
+    }
+
+    .top-header-text {
+        display: none;
+    }
+
+    .searchInput {
+        display: none;
+    }
+
+    /* Mobile Navigation */
+    #side-bar {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        right: -100%;
+        background-color: rgb(255, 255, 255);
+        z-index: 2000;
+        padding: 5rem 2rem 2rem;
+        box-sizing: border-box;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    #side-bar.active {
+        right: 0;
+    }
+
+    #side-bar ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    #side-bar ul li a {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    .close-menu {
+        display: block;
+    }
+    
+    /* Hide Mega Menu on Mobile */
+    .mega-box {
+        display: none;
+    }
+    
+    .mobile-item {
+        display: none;
+    }
+}

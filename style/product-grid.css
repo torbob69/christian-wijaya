@@ -1,0 +1,145 @@
+.product-grid {
+    margin-top: 4px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2rem;
+    padding-left: 0.5rem;  /* Forced left padding */
+    padding-right: 0.5rem; /* Forced right padding */
+    background-color: #fff;
+    box-sizing: border-box !important; /* Ensure padding is included in width calculation */
+}
+  
+/* Product Card Styles */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+  
+.product-card:hover {
+    transform: translateY(-5px);
+}
+  
+.product-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+  
+.product-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.product-image-animate {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+.product-card:hover .product-image {
+    opacity: 0.9;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.product-card:hover .product-image {
+    opacity: 0.9;
+}
+  
+.quick-view-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 0;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(40px);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Lexend Giga", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+  
+.product-card:hover .quick-view-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.product-info {
+    padding: 0.5rem 0;
+}
+  
+.product-name {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: #000000;
+}
+  
+.product-price {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #1a1a1ac5;
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.25rem;
+        margin-top: 0;
+    }
+
+    .product-name {
+        font-size: 0.8rem;
+    }
+    
+    .product-price {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 376px){
+    .product-name {
+        font-size: 0.6rem;
+    }
+    
+    .product-price {
+        font-size: 0.75rem;
+    }
+}

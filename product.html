@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/productstyle.css">
+    <link rel="stylesheet" href="style/headerstyle.css">
+    <link rel="stylesheet" href="style/footerstyle.css">
+    <link rel="stylesheet" href="style/product-grid.css">
+    <link rel="stylesheet" href="style/filter-side-bar.css">
+    <script src="script/header.js"></script>
+    <script src="script/footer.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ephesis&family=Inconsolata:wght@200..900&family=League+Spartan:wght@100..900&family=Lexend+Giga:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <title>Products | Christian Wijaya</title>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <section class="product-thumbnail-wrapper">
+            <video id="product-background-video" class="product-thumbnail-video" autoplay muted loop>
+                <source src="" type="video/mp4">
+            </video>
+            <div class="product-thumbnail">DIRECTING...</div>
+        </section>
+
+        <div class="filter-button-container">
+            <button class="filter-button" id="openFilterSidebar">
+                <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="7" y1="12" x2="17" y2="12"></line>
+                    <line x1="10" y1="18" x2="14" y2="18"></line>
+                </svg>
+                FILTER
+            </button>
+        </div>
+
+        <div class="filter-overlay" id="filterOverlay"></div>
+        <div class="filter-sidebar" id="filterSidebar">
+            <div class="filter-sidebar-header">
+                <div class="filter-sidebar-title">FILTER</div>
+                <button class="close-filter-sidebar" id="closeFilterSidebar">×</button>
+            </div>
+            <div class="filter-sidebar-content">
+                <div class="filter-section">
+                    <div class="filter-section-title">GENDER</div>
+                    <div class="filter-options">
+                        <select class="filter-select" id="genderselection">
+                            <option value="all">ALL</option>
+                            <option value="men">MEN</option>
+                            <option value="women">WOMEN</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">TYPE</div>
+                    <div class="filter-options">
+                        <select class="filter-select" id="producttypeselection">
+                            <option value="all">ALL</option>
+                            <option value="tops">TOPS</option>
+                            <option value="bottoms">BOTTOMS</option>
+                            <option value="accessories">ACCESSORIES</option>
+                            <option value="bags">BAGS</option>
+                            <option value="shoes">SHOES</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">ITEM</div>
+                    <div class="filter-options">
+                        <select class="filter-select" id="itemselection">
+                            <option value="all">ALL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-section-title">PRICE</div>
+                    <div class="filter-options">
+                        <select class="filter-select" id="priceselection">
+                            <option value="all">ALL</option>
+                            <option value="lowest">LOWEST TO HIGHEST</option>
+                            <option value="highest">HIGHEST TO LOWEST</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="filter-action-button reset-filters" id="resetFilters">RESET</button>
+                <button class="filter-action-button apply-filters" id="applyFilters">APPLY</button>
+            </div>
+        </div>
+
+        <section class="product-grid">
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="script/product-data.js"></script>
+    <script src="script/printall.js"></script>
+    <script src="script/category-selection.js"></script>
+    <script src="script/product-grid-animation.js"></script>
+    <script src="script/product-detail.js"></script>
+</body>
+
+</html>
