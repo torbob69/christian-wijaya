@@ -29,6 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Get base path for GitHub Pages compatibility
+function getBasePath() {
+    // Check if we're on GitHub Pages (contains github.io or has a specific repository path)
+    const isGitHubPages = window.location.hostname.includes('github.io') || 
+                          window.location.pathname.includes('/christian-wijaya/');
+    
+    // If on GitHub Pages, use the repository name as the base path
+    if (isGitHubPages) {
+        // Extract the repository name from the pathname
+        const pathParts = window.location.pathname.split('/');
+        // Find the repository name (usually the first non-empty segment after the domain)
+        for (let i = 1; i < pathParts.length; i++) {
+            if (pathParts[i]) {
+                return '/' + pathParts[i];
+            }
+        }
+        return '/christian-wijaya'; // Fallback to your repository name
+    }
+    
+    // If running locally, use root path
+    return '';
+}
+
 // ======== NAVIGATION SETUP FUNCTIONS ========
 
 function setupNavigationLinks() {
@@ -354,19 +377,24 @@ function updateBackgroundVideo(gender) {
     void thumbnailText.offsetWidth;
     void backgroundVideo.offsetWidth;
     
+    // Get the base path for GitHub Pages compatibility
+    const basePath = getBasePath();
+    
     if (gender === "men") {
-        backgroundVideo.querySelector("source").src = "/christian-wijaya/assets/products/men-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = `${basePath}/assets/products/men-product-thumbnail - Made with Clipchamp.mp4`;
         thumbnailText.innerHTML = `MEN`;
     } 
     else if (gender === "women") {
-        backgroundVideo.querySelector("source").src = "/christian-wijaya/assets/products/women-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = `${basePath}/assets/products/women-product-thumbnail - Made with Clipchamp.mp4`;
         thumbnailText.innerHTML = `WOMEN`;
     }
     else {
         // Default background for "all"
-        backgroundVideo.querySelector("source").src = "/christian-wijaya/assets/products/all-product-thumbnail - Made with Clipchamp.mp4";
+        backgroundVideo.querySelector("source").src = `${basePath}/assets/products/all-product-thumbnail - Made with Clipchamp.mp4`;
         thumbnailText.innerHTML = 'ALL PRODUCTS';
     }
+    
+    console.log(`Updated video source to: ${backgroundVideo.querySelector("source").src}`);
     
     // Important: reload the video after changing the source
     backgroundVideo.load();
