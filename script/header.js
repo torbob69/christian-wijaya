@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector("header");
 
     header.innerHTML = `
-    <a href="home.html" class="logo">
+    <a href="index.html" class="logo">
             <img src="assets/nav-bar/horse-carriage.svg" class="gambar-kuda">
             <div id="text-logo">Christian Wijaya</div>
         </a>
